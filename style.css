@@ -1,0 +1,63 @@
+body {
+  margin: 0 auto;
+  background-image: url(assets/img/giger.jpg);
+}
+/* Estilo de cabecera*/
+.header {
+    background: #5EAADE;
+    text-align: center;
+}
+
+h1 {
+  color: #FFF;
+  font-family: 'Fredoka One', cursive;
+  font-size: 60px;
+  margin: 0;
+  padding:20px;
+}
+
+h2 {
+  margin: 0;
+}
+
+#twitear {
+  margin: 10px 100px 0 100px;
+}
+
+hr {
+  border: 2px solid #5EAADE;
+  margin: 10px;
+}
+
+/* Estilo de la sección de información*/
+#info {
+  width:  500px;
+  height: 200px;
+  background: #FFF;
+  padding: 30px;
+  display: inline-block;
+}
+
+#código{
+  font-size: 20px;
+  color: blue;
+}
+
+#text-area {
+  width: 500px;
+  height: auto;
+  display: inline-block;
+  background: #FFF;
+}
+
+textarea {
+    width: 100%;
+    display: block;
+}
+button{
+  clear: both;
+}
+.tuit {
+    border: 2px solid #5EAADE;
+    background: #FFF;
+}
