@@ -31,32 +31,53 @@ hr {
 
 /* Estilo de la sección de información*/
 #info {
-  width:  500px;
+  width:  538px;
   height: 200px;
   background: #FFF;
   padding: 30px;
   display: inline-block;
+  margin-bottom: 30px;
+  box-sizing: border-box;
 }
 
 #código{
   font-size: 20px;
   color: blue;
+  margin-top: 50px;
 }
 
 #text-area {
-  width: 500px;
+  width: 538px;
   height: auto;
+  margin-left: 80px;
   display: inline-block;
   background: #FFF;
+  margin-bottom: 30px;
+  box-sizing: border-box;
 }
 
 textarea {
     width: 100%;
-    display: block;
+    border: hidden;
+}
+
+textarea:focus{
+  outline: none;
 }
 button{
+  width: 100px;
+  height: 40px;
   clear: both;
+  background: #5EAADE;
+  color: #FFF;
+  border-radius: 10px;
 }
+
+button:focus{
+  background: #9a9a9a;
+  color: #000;
+}
+
 .tuit {
     border: 2px solid #5EAADE;
     background: #FFF;
