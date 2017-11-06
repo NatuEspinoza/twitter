@@ -8,25 +8,24 @@ window.onload = function() {
 
     /*Creando contador de caracteres
     thinkInput.onkeydown = function() {
-      var text = document.getElementsByName("message")[0].value;
-      var textCount = text.split(" ");
-      var finalText = textCount.length;
-      var numbers = document.createElement("p");
-      var numbersP = document.createTextNode(finalText);
-      count.appendChild(numbers);
-      numbers.appendChild(numbersP);
-      document.getElementById("count").appendChild(numbers);
+        var text = document.getElementsByName("thinkInput")[0];
+        var length = text.getAttribute("maxlength");
+        var count = document.getElementById("count");
+        count.innerHTML = length;
+        text.onkeyup = function (){
+        document.getElementById("count").innerHTML = (length - this.value.length);
+      }
     }*/
 
     /*Desabilitar boton si ingresan campos vacios o más de 140 caracteres*/
-    thinkInput.onkeyup = function (){
-      if (thinkInput.value == "" || thinkInput.value > "140") {
-          sendButton.disabled = true;
-      /*si no se cumple la condición anterior se crea div que contendrá los tweets*/
-      } else {
-        sendButton.disabled = false;
-      }
-    }
+    thinkInput.oninput= function (){
+       if (thinkInput.value == "" || thinkInput.value.length > 140) {
+           sendButton.disabled = true;
+       /*si no se cumple la condición anterior se crea div que contendrá los tweets*/
+       } else {
+          sendButton.disabled = false;
+       }
+     }
 
     /*función para enviar tweet por medio de un boton*/
     sendButton.onclick = function() {
