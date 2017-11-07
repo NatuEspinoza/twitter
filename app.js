@@ -6,16 +6,16 @@ window.onload = function() {
     var thinkInput = document.getElementsByName("message")[0];
     var timeLine = document.getElementsByName("timeLine")[0];
 
-    /*Creando contador de caracteres
-    thinkInput.onkeydown = function() {
-        var text = document.getElementsByName("thinkInput")[0];
-        var length = text.getAttribute("maxlength");
-        var count = document.getElementById("count");
-        count.innerHTML = length;
-        text.onkeyup = function (){
-        document.getElementById("count").innerHTML = (length - this.value.length);
+    /*Creando contador de caracteres*/
+      thinkInput.onkeyup = function () {
+      document.getElementById('count').innerHTML = (400 - this.value.length);
+      if (count.length >= 120){
+        count.style.color = '#eb8e0f';
       }
-    }*/
+      if (count.length >= 130) {
+        count.style.color = '#ec0000';
+      }
+    }
 
     /*Desabilitar boton si ingresan campos vacios o más de 140 caracteres*/
     thinkInput.oninput= function (){
