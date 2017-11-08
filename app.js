@@ -37,8 +37,10 @@ window.onload = function() {
 
     /*función para enviar tweet por medio de un boton*/
     sendButton.onclick = function() {
+            //volver contador a 140
             var counter = document.getElementById('count');
-            counter.innerHTML = 0;
+            counter.innerHTML = 140;
+            //agregando div con tweet
             var tweetDiv = document.createElement("div");
             var nameSpan = document.createElement("span");
             var dateSpan = document.createElement("span");
