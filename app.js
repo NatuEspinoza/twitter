@@ -8,20 +8,28 @@ window.onload = function() {
 
     /*Creando contador de caracteres*/
       thinkInput.onkeyup = function () {
-      document.getElementById('count').innerHTML = (400 - this.value.length);
-      if (count.length >= 120){
-        count.style.color = '#eb8e0f';
+      document.getElementById('count').innerHTML = (140 - this.value.length);
+      if (thinkInput.value.length >= 120 && thinkInput.value.length < 130){
+        document.getElementById('count').className = 'green';
       }
-      if (count.length >= 130) {
-        count.style.color = '#ec0000';
+      if (thinkInput.value.length >= 130) {
+        document.getElementById('count').className = 'red';
       }
+    }
+
+    /*Tamaño de textarea*/
+    var textarea = document.getElementsByName("message");
+    var limit = 200;
+    textarea.oninput = function() {
+      textarea.style.height = "";
+      textarea.style.height = Math.min(textarea.scrollHeight, 300) + "px";
     }
 
     /*Desabilitar boton si ingresan campos vacios o más de 140 caracteres*/
     thinkInput.oninput= function (){
        if (thinkInput.value == "" || thinkInput.value.length > 140) {
            sendButton.disabled = true;
-       /*si no se cumple la condición anterior se crea div que contendrá los tweets*/
+       /*si no se cumple la condición se habilita boton*/
        } else {
           sendButton.disabled = false;
        }
@@ -29,24 +37,24 @@ window.onload = function() {
 
     /*función para enviar tweet por medio de un boton*/
     sendButton.onclick = function() {
-            var tuitDiv = document.createElement("div");
+            var tweetDiv = document.createElement("div");
             var nameSpan = document.createElement("span");
             var dateSpan = document.createElement("span");
-            var tuitP = document.createElement("p");
-            tuitDiv.appendChild(nameSpan);
-            tuitDiv.appendChild(dateSpan);
-            tuitDiv.appendChild(tuitP);
-            tuitDiv.className = "tuit"
+            var tweetP = document.createElement("p");
+            tweetDiv.appendChild(nameSpan);
+            tweetDiv.appendChild(dateSpan);
+            tweetDiv.appendChild(tweetP);
+            tweetDiv.className = "tweet"
             nameSpan.textContent = "Natu Espinoza ";
             nameSpan.style.fontWeight = "bold";
             nameSpan.style.fontFamily = "Fredoka One";
             dateSpan.textContent = new Date();
             dateSpan.style.fontSize = "12px";
-            tuitP.textContent = thinkInput.value;
-            tuitP.style.background = "background #FFF";
+            tweetP.textContent = thinkInput.value;
+            tweetP.style.background = "background #FFF";
 
             /*Insertando los nodos de cada tweet, cada nuevo tweet es puesto antes que el anterior*/
-            timeLine.insertBefore(tuitDiv, timeLine.children[0]);
+            timeLine.insertBefore(tweetDiv, timeLine.children[0]);
 
         }
       }

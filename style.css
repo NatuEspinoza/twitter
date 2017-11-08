@@ -46,6 +46,7 @@ hr {
   margin-top: 50px;
 }
 
+/*Estilo de la sección para twitear*/
 #text-area {
   width: 538px;
   height: auto;
@@ -77,8 +78,17 @@ button:focus{
   background: #9a9a9a;
   color: #000;
 }
-
-.tuit {
+/*Estilo del tweet*/
+.tweet {
     border: 2px solid #5EAADE;
     background: #FFF;
+}
+
+/* color para contador*/
+.green {
+  color: #3b8700;
+}
+
+.red {
+  color: #a21010;
 }
