@@ -37,6 +37,8 @@ window.onload = function() {
 
     /*función para enviar tweet por medio de un boton*/
     sendButton.onclick = function() {
+            var counter = document.getElementById('count');
+            counter.innerHTML = 0;
             var tweetDiv = document.createElement("div");
             var nameSpan = document.createElement("span");
             var dateSpan = document.createElement("span");
@@ -52,6 +54,8 @@ window.onload = function() {
             dateSpan.style.fontSize = "12px";
             tweetP.textContent = thinkInput.value;
             tweetP.style.background = "background #FFF";
+            //Limpiando el textarea luego de enviar el tweet
+            document.getElementsByName("message")[0].value = "";
 
             /*Insertando los nodos de cada tweet, cada nuevo tweet es puesto antes que el anterior*/
             timeLine.insertBefore(tweetDiv, timeLine.children[0]);
