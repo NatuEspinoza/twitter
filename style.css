@@ -2,10 +2,12 @@ body {
   margin: 0 auto;
   background-image: url(assets/img/giger.jpg);
 }
+
 /* Estilo de cabecera*/
+
 .header {
-    background: #5EAADE;
-    text-align: center;
+  background: #5EAADE;
+  text-align: center;
 }
 
 h1 {
@@ -13,7 +15,7 @@ h1 {
   font-family: 'Fredoka One', cursive;
   font-size: 60px;
   margin: 0;
-  padding:20px;
+  padding: 20px;
 }
 
 h2 {
@@ -30,8 +32,9 @@ hr {
 }
 
 /* Estilo de la sección de información*/
+
 #info {
-  width:  538px;
+  width: 538px;
   height: 200px;
   background: #FFF;
   padding: 30px;
@@ -40,13 +43,14 @@ hr {
   box-sizing: border-box;
 }
 
-#código{
+#código {
   font-size: 20px;
   color: blue;
   margin-top: 50px;
 }
 
 /*Estilo de la sección para twitear*/
+
 #text-area {
   width: 538px;
   height: auto;
@@ -58,14 +62,15 @@ hr {
 }
 
 textarea {
-    width: 100%;
-    border: hidden;
+  width: 100%;
+  border: hidden;
 }
 
-textarea:focus{
+textarea:focus {
   outline: none;
 }
-button{
+
+button {
   width: 100px;
   height: 40px;
   clear: both;
@@ -74,17 +79,20 @@ button{
   border-radius: 10px;
 }
 
-button:focus{
+button:focus {
   background: #9a9a9a;
   color: #000;
 }
+
 /*Estilo del tweet*/
+
 .tweet {
-    border: 2px solid #5EAADE;
-    background: #FFF;
+  border: 2px solid #5EAADE;
+  background: #FFF;
 }
 
 /* color para contador*/
+
 .green {
   color: #3b8700;
 }
